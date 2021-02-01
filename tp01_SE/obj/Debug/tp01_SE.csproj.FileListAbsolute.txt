@@ -21,3 +21,14 @@ C:\Users\fanah\Documents\UQAR\System Exploitation\TP1\UQAR_TP01_SE\tp01_SE\obj\D
 C:\Users\fanah\Documents\UQAR\System Exploitation\TP1\UQAR_TP01_SE\tp01_SE\obj\Debug\tp01_SE.csproj.CoreCompileInputs.cache
 C:\Users\fanah\Documents\UQAR\System Exploitation\TP1\UQAR_TP01_SE\tp01_SE\obj\Debug\testAppliGraphique.exe
 C:\Users\fanah\Documents\UQAR\System Exploitation\TP1\UQAR_TP01_SE\tp01_SE\obj\Debug\testAppliGraphique.pdb
+C:\Users\ClientMD\Documents\Session 5 BAC info\Systèmes d'exploitation\UQAR_TP01_SE-master\tp01_SE\bin\Debug\testAppliGraphique.exe.config
+C:\Users\ClientMD\Documents\Session 5 BAC info\Systèmes d'exploitation\UQAR_TP01_SE-master\tp01_SE\bin\Debug\testAppliGraphique.exe
+C:\Users\ClientMD\Documents\Session 5 BAC info\Systèmes d'exploitation\UQAR_TP01_SE-master\tp01_SE\bin\Debug\testAppliGraphique.pdb
+C:\Users\ClientMD\Documents\Session 5 BAC info\Systèmes d'exploitation\UQAR_TP01_SE-master\tp01_SE\obj\Debug\tp01_SE.csprojAssemblyReference.cache
+C:\Users\ClientMD\Documents\Session 5 BAC info\Systèmes d'exploitation\UQAR_TP01_SE-master\tp01_SE\obj\Debug\tp01_SE.AddProcessForm.resources
+C:\Users\ClientMD\Documents\Session 5 BAC info\Systèmes d'exploitation\UQAR_TP01_SE-master\tp01_SE\obj\Debug\tp01_SE.PrincipalForm.resources
+C:\Users\ClientMD\Documents\Session 5 BAC info\Systèmes d'exploitation\UQAR_TP01_SE-master\tp01_SE\obj\Debug\testAppliGraphique.Properties.Resources.resources
+C:\Users\ClientMD\Documents\Session 5 BAC info\Systèmes d'exploitation\UQAR_TP01_SE-master\tp01_SE\obj\Debug\tp01_SE.SupProcessForm.resources
+C:\Users\ClientMD\Documents\Session 5 BAC info\Systèmes d'exploitation\UQAR_TP01_SE-master\tp01_SE\obj\Debug\tp01_SE.csproj.GenerateResource.cache
+C:\Users\ClientMD\Documents\Session 5 BAC info\Systèmes d'exploitation\UQAR_TP01_SE-master\tp01_SE\obj\Debug\testAppliGraphique.exe
+C:\Users\ClientMD\Documents\Session 5 BAC info\Systèmes d'exploitation\UQAR_TP01_SE-master\tp01_SE\obj\Debug\testAppliGraphique.pdb

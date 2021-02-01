@@ -14,7 +14,7 @@ namespace tp01_SE
         private decimal nbInstructCalc;
         private decimal nbInstructES;
         private decimal nbCycle;
-        private int nbThread;
+        public int nbThread;
         private List<Thread> lstThread = new List<Thread>();
         public Processus(int PID, string nom, decimal priorite, decimal nbInstructCalc, decimal nbInstructES, decimal nbCycle, int nbThread)
         {
@@ -49,7 +49,7 @@ namespace tp01_SE
             {
                 bool flagCalc = false;
                 bool flagES = false;
-                for (int i = 0; i < this.nbThread - 1; i++)
+                for (int i = 0; i < this.nbThread; i++)
                 {
                     if (((this.nbInstructCalc % this.nbThread) != 0 && !flagCalc) && ((this.nbInstructES % this.nbThread) != 0 && !flagES))
                     {
@@ -58,17 +58,22 @@ namespace tp01_SE
                         flagCalc = true;
                         flagES = true;
 
-                    } else if ((this.nbInstructCalc % this.nbThread) != 0 && !flagCalc)
+                    }
+
+                    else if ((this.nbInstructCalc % this.nbThread) != 0 && flagCalc)
                     {
                         Thread newThread = new Thread(this.nom, this.PID, this.priorite, (this.PID * 10) + this.lstThread.Count(), this.initInstruction(1, 0));
                         this.lstThread.Add(newThread);
                         flagES = true;
-                    } else if ((this.nbInstructES % this.nbThread) != 0 && !flagES)
+                    }         
+
+                    else if ((this.nbInstructES % this.nbThread) != 0 && !flagES)
                     {
                         Thread newThread = new Thread(this.nom, this.PID, this.priorite, (this.PID * 10) + this.lstThread.Count(), this.initInstruction(0, 1));
                         this.lstThread.Add(newThread);
                         flagCalc = true;
-                    } else {
+                    }                    
+                    else {
                         Thread newThread = new Thread(this.nom, this.PID, this.priorite, (this.PID * 10) + this.lstThread.Count(), this.initInstruction(0, 0));
                         this.lstThread.Add(newThread);
                     }
@@ -79,7 +84,7 @@ namespace tp01_SE
 
         public List<string> initInstruction(int ajoutNbInstructCalc, int ajoutNbInstructES) {
             List<string> instruct = new List<string>();
-            for (int i = 0; i < (nbInstructCalc + ajoutNbInstructCalc); i++)
+            for (int i = 0; i < (nbInstructCalc + ajoutNbInstructCalc) ; i++)
             {
                 instruct.Add("Calcul");
             }

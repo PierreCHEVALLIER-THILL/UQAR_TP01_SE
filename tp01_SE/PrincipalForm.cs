@@ -53,25 +53,59 @@ namespace tp01_SE
         {
             this.lstRAM.BeginUpdate();
             //Je clear les items de la listBox, pour pas que ça reécrive le process précedant
-            this.lstRAM.Items.Clear();
+            this.lstRAM.Items.Clear();            
+            tblRAM.Controls.Clear();
+            tblRAM.RowCount = 1;
+            tblRAM.ColumnCount = 0;
             Debug.WriteLine("Affichage des threads: nbProcess:" + this.lstProcessus.Count());
             foreach (Processus process in this.lstProcessus)
             {
+                tblRAM.RowCount = 1;
                 Debug.WriteLine("nbThread: " + process.getThreads().Count());
                 foreach(Thread thread in process.getThreads())
                 {
                     this.lstRAM.Items.Add(thread.getInfoThread());
+                    tblRAM.ColumnCount++;
+                    tblRAM.RowCount = 1;                                                   
+                    //Ajouter un rowstyle
+                    tblRAM.RowStyles.Add(new RowStyle(SizeType.Absolute));
+                    //Ajouter une ligne
+                    Label lbl = new Label();
+                    lbl.Height = 70;
+                    lbl.Text = thread.getInfoThread();
+                    tblRAM.Controls.Add(lbl, tblRAM.ColumnCount - 1, tblRAM.RowCount - 1);                                   
                     foreach (string instruct in thread.getInstructions())
-                    {
-                        this.lstRAM.Items.Add(instruct);
+                    {                        
+                        this.lstRAM.Items.Add(instruct);                        
+                        tblRAM.RowCount++;
+                        Label lbl2 = new Label();
+                        lbl2.Height = 25;
+                        lbl2.Text = instruct;
+                        tblRAM.Controls.Add(lbl2, tblRAM.ColumnCount - 1, tblRAM.RowCount - 1);                                         
                     }
                 }
-                
+                TableLayoutRowStyleCollection styles = tblRAM.RowStyles;
+                foreach (RowStyle style in styles)
+                {
+                    if (style.SizeType == SizeType.Absolute)
+                    {
+                        style.Height = 30;
+                    }
+                    else
+                    {
+                        style.Height = 100;
+                    }
+                }
             }
             this.lstRAM.EndUpdate();
         }
 
         private void lstRAM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
