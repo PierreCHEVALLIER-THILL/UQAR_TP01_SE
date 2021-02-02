@@ -52,6 +52,8 @@
     <Compile Include="AddProcessForm.Designer.cs">
       <DependentUpon>AddProcessForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="Instruction.cs" />
     <Compile Include="PrincipalForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -36,6 +36,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lstRAM = new System.Windows.Forms.ListBox();
             this.tblRAM = new System.Windows.Forms.TableLayoutPanel();
+            this.btntestcouleur = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -46,9 +47,9 @@
             this.groupBox1.Controls.Add(this.btnSup);
             this.groupBox1.Controls.Add(this.btnAjout);
             this.groupBox1.Location = new System.Drawing.Point(16, 14);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(192, 110);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -57,7 +58,7 @@
             // btnSup
             // 
             this.btnSup.Location = new System.Drawing.Point(9, 71);
-            this.btnSup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSup.Margin = new System.Windows.Forms.Padding(4);
             this.btnSup.Name = "btnSup";
             this.btnSup.Size = new System.Drawing.Size(171, 28);
             this.btnSup.TabIndex = 1;
@@ -68,7 +69,7 @@
             // btnAjout
             // 
             this.btnAjout.Location = new System.Drawing.Point(9, 25);
-            this.btnAjout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAjout.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjout.Name = "btnAjout";
             this.btnAjout.Size = new System.Drawing.Size(171, 28);
             this.btnAjout.TabIndex = 0;
@@ -80,9 +81,9 @@
             // 
             this.groupBox2.Controls.Add(this.btnLancer);
             this.groupBox2.Location = new System.Drawing.Point(427, 14);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(236, 110);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -91,7 +92,7 @@
             // btnLancer
             // 
             this.btnLancer.Location = new System.Drawing.Point(8, 25);
-            this.btnLancer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLancer.Margin = new System.Windows.Forms.Padding(4);
             this.btnLancer.Name = "btnLancer";
             this.btnLancer.Size = new System.Drawing.Size(220, 28);
             this.btnLancer.TabIndex = 2;
@@ -103,9 +104,9 @@
             // 
             this.groupBox3.Controls.Add(this.lstRAM);
             this.groupBox3.Location = new System.Drawing.Point(16, 144);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(300, 343);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
@@ -119,7 +120,7 @@
             this.lstRAM.HorizontalScrollbar = true;
             this.lstRAM.ItemHeight = 16;
             this.lstRAM.Location = new System.Drawing.Point(9, 23);
-            this.lstRAM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstRAM.Margin = new System.Windows.Forms.Padding(4);
             this.lstRAM.Name = "lstRAM";
             this.lstRAM.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.lstRAM.Size = new System.Drawing.Size(628, 324);
@@ -140,12 +141,24 @@
             this.tblRAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblRAM.Size = new System.Drawing.Size(155, 120);
             this.tblRAM.TabIndex = 4;
+            this.tblRAM.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblRAM_CellPaint);
+            // 
+            // btntestcouleur
+            // 
+            this.btntestcouleur.Location = new System.Drawing.Point(259, 63);
+            this.btntestcouleur.Name = "btntestcouleur";
+            this.btntestcouleur.Size = new System.Drawing.Size(105, 35);
+            this.btntestcouleur.TabIndex = 5;
+            this.btntestcouleur.Text = "test couleur";
+            this.btntestcouleur.UseVisualStyleBackColor = true;
+            this.btntestcouleur.Click += new System.EventHandler(this.btntestcouleur_Click);
             // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 532);
+            this.ClientSize = new System.Drawing.Size(1212, 532);
+            this.Controls.Add(this.btntestcouleur);
             this.Controls.Add(this.tblRAM);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -172,6 +185,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         public System.Windows.Forms.ListBox lstRAM;
         private System.Windows.Forms.TableLayoutPanel tblRAM;
+        private System.Windows.Forms.Button btntestcouleur;
     }
 }
 

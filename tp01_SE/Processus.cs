@@ -38,7 +38,6 @@ namespace tp01_SE
             return (this.lstThread);
         }
 
-
         public void initLstThread()
         {
             if (this.nbThread == 1)
@@ -82,17 +81,22 @@ namespace tp01_SE
 
         }
 
-        public List<string> initInstruction(int ajoutNbInstructCalc, int ajoutNbInstructES) {
-            List<string> instruct = new List<string>();
+        public List<Instruction> initInstruction(int ajoutNbInstructCalc, int ajoutNbInstructES) {
+            List<Instruction> listInstructions = new List<Instruction>();
+            
             for (int i = 0; i < (nbInstructCalc + ajoutNbInstructCalc) ; i++)
             {
-                instruct.Add("Calcul");
+                Instruction instruction = new Instruction(Enums.etat.Initialise, Enums.type.Calcul);
+                listInstructions.Add(instruction);
+                //instruct.Add("Calcul");
             }
             for (int i = 0; i < (nbInstructES + ajoutNbInstructES); i++)
             {
-                instruct.Add("Entree Sortie");
+                Instruction instruction = new Instruction(Enums.etat.Initialise, Enums.type.EntreeSortie);
+                listInstructions.Add(instruction);
+                //instruct.Add("Entree Sortie");
             }
-            return (instruct);
+            return (listInstructions);
         }
 
 

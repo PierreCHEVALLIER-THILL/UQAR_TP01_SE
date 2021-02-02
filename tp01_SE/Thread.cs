@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace tp01_SE
 {
     public class Thread
@@ -12,8 +13,9 @@ namespace tp01_SE
         private int PID;
         private decimal priorite;
         private int TID;
-        private List<string> lstInstructions = new List<string>();
-        public Thread(string processNom, int PID, decimal priorite, int TID, List<string>  lstInstructions)
+        //private List<string> lstInstructions = new List<string>();
+        private List<Instruction> lstInstructions = new List<Instruction>();
+        public Thread(string processNom, int PID, decimal priorite, int TID, List<Instruction>  lstInstructions)
         {
             this.processNom = processNom;
             this.PID = PID;
@@ -31,7 +33,7 @@ namespace tp01_SE
             infos += "Etat:";
             return (infos);
         }
-        public List<string> getInstructions()
+        public List<Instruction> getInstructions()
         {
             return (this.lstInstructions);
         }
