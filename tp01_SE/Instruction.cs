@@ -11,10 +11,10 @@ namespace tp01_SE
         private Enums.etat etat;
         private Enums.type type;
 
-        public Instruction(Enums.etat etat, Enums.type type)
+        public Instruction(Enums.type type)
         {
 
-            this.etat = etat;
+            this.etat = Enums.etat.Initialise;
             this.type = type;
             
         }

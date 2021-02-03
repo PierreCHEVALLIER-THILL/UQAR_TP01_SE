@@ -13,6 +13,7 @@ namespace tp01_SE
         private int PID;
         private decimal priorite;
         private int TID;
+        private Enums.etat etat;
         //private List<string> lstInstructions = new List<string>();
         private List<Instruction> lstInstructions = new List<Instruction>();
         public Thread(string processNom, int PID, decimal priorite, int TID, List<Instruction>  lstInstructions)
@@ -22,6 +23,7 @@ namespace tp01_SE
             this.priorite = priorite;
             this.TID = TID;
             this.lstInstructions = lstInstructions;
+            this.etat = Enums.etat.Initialise;
         }
 
         public string getInfoThread()
@@ -30,7 +32,7 @@ namespace tp01_SE
             infos += "PID: " + this.PID + "\n\t";
             infos += "TID: " + this.TID + "\n\t";
             infos += "Priorité: " + this.priorite + "\n\t";
-            infos += "Etat:";
+            infos += "Etat: "+ this.etat;
             return (infos);
         }
         public List<Instruction> getInstructions()

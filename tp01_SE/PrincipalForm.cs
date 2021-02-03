@@ -33,9 +33,6 @@ namespace tp01_SE
                             "Version: Beta\n" +
                             "Author: Bétil Charlotte & Chevallier Pierre\n" +
                             "Organisation: UQAR\n");
-
-            
-
         }
 
         private void btnLancer_Click(object sender, EventArgs e)
@@ -83,7 +80,6 @@ namespace tp01_SE
 
         private void btnAjout_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("Ajout");
             Form form = new AddProcessForm(ref this.lstProcessus);
             form.ShowDialog();
             this.displayLstThread();
@@ -93,6 +89,7 @@ namespace tp01_SE
         {
             Form form = new SupProcessForm(ref this.lstProcessus);
             form.ShowDialog();
+            this.displayLstThread();
         }
 
         private void displayLstThread()
@@ -103,11 +100,9 @@ namespace tp01_SE
             tblRAM.Controls.Clear();
             tblRAM.RowCount = 1;
             tblRAM.ColumnCount = 0;
-            Debug.WriteLine("Affichage des threads: nbProcess:" + this.lstProcessus.Count());
             foreach (Processus process in this.lstProcessus)
             {
                 tblRAM.RowCount = 1;
-                Debug.WriteLine("nbThread: " + process.getThreads().Count());
                 foreach(Thread thread in process.getThreads())
                 {
                     this.lstRAM.Items.Add(thread.getInfoThread());
@@ -194,9 +189,9 @@ namespace tp01_SE
                 {
                     e.Graphics.FillRectangle(b, e.CellBounds);
                 }
-                
+
             }
-            
+
         }
 
         private void updateCouleur()

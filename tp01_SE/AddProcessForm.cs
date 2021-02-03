@@ -35,11 +35,7 @@ namespace tp01_SE
             } else if (this.rdBtn3Thread.Checked)
             {
                 return (3);
-            } else if (this.rdBtn1et3Thread.Checked)
-            {
-                return (3);
             }
-
              return (1);
         }
 
